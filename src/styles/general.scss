@@ -34,6 +34,10 @@ a {
   flex-wrap: wrap;
 }
 
+.row > [class^='col'] {
+	padding: 20px;
+}
+
 .col-3 {
   width: calc(100% * 3 / 12);
   padding: 0 5px;

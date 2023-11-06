@@ -135,30 +135,9 @@ figure > img {
 .red-cost {
     color: red;
 }
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-
-
-
-
-.col-4 {
-	flex-basis: calc((100% / 12) * 4);
-}
-
-
-
-.row > [class^='col'] {
-	padding: 20px;
-}
-
 .card__image {
 	position: relative;
 }
-
 .heart-icon {
 	position: absolute;
 	top:4%;
@@ -168,14 +147,11 @@ figure > img {
 	font-size: 25px;
 	color: rgb(0, 0, 0);
 }
-
 .square {
     background-color: white;
     width: 40px;
     height: 33px;
-}
-
-.text {
+}.text {
 	position: absolute;
 	bottom:10%;
 }
@@ -185,11 +161,9 @@ figure > img {
     display: inline-block;
 	top:85%;
 	left:0%;
-	
 	text-align: center;
 	font-size: 15px;
 	color: rgb(255, 255, 255);
-    
 }
 
 .rectangle-red {
@@ -200,14 +174,12 @@ figure > img {
 
 .sustainability {
 	z-index: 1;
-    
-	top:85%;
+    top:85%;
 	right:42%;
 	display: inline-block;
 	text-align: center;
 	font-size: 15px;
 	color: rgb(255, 255, 255);
-    
 }
 
 .rectangle-green {
@@ -215,7 +187,6 @@ figure > img {
     height: 20px;
     background-color: green;
 }
-
 .sustainability1 {
     position: absolute;
 	top:85%;
@@ -224,18 +195,15 @@ figure > img {
 	font-size: 15px;
 	color: rgb(255, 255, 255);
 }
-
 .image1 {
     position: relative;
 }
-
 .image2 {
     position: absolute;
     bottom: 0px;
     opacity: 0;
     transition: all 0.7s ease;
 }
-
 .image2:hover {
     opacity: 1;
 }
