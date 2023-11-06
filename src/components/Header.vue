@@ -3,6 +3,11 @@ export default {
   data() {
     return {
       title: "Header",
+      headerItems: [
+        { text: "Donna"},
+        { text: "Uomo"},
+        { text: "Bambino"},
+      ],
     };
   },
 };
@@ -13,12 +18,12 @@ export default {
     <div class="row container">
       <div class="col-4 center-items">
         <ul>
-          <li>Donna</li>
-          <li>Uomo</li>
-          <li>Bambino</li>
+          <li v-for="item in headerItems" :key="item.text">
+            {{ item.text }}
+          </li>
         </ul>
       </div>
-      <div class="col-4 center-items ">
+      <div class="col-4 center-items">
         <img class="logo1" src="/img/boolean-logo.png" />
       </div>
       <div class="col-4 center-items">
@@ -63,7 +68,4 @@ header {
   width: 30px;
   height: 30px;
 }
-
-
-
 </style>
