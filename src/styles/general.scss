@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,100;9..40,700&family=Fredoka:wght@700&family=Inconsolata:wght@300;600&family=Poppins:wght@200&family=Roboto:wght@100&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -9,9 +12,11 @@ img {
 }
 
 ul,
-ol,
+li,
 menu {
   list-style: none;
+  display: flex;
+  gap: 10px;
 }
 
 a {
@@ -36,6 +41,11 @@ a {
 
 .col-4 {
   width: calc(100% * 4 / 12);
+  
+}
+
+.col-8 {
+  width: calc(100% * 8 / 12);
 }
 
 

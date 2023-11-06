@@ -11,20 +11,20 @@ export default {
 <template>
   <header>
     <div class="row container">
-      <div class="col-4">
+      <div class="col-4 center-items">
         <ul>
           <li>Donna</li>
           <li>Uomo</li>
           <li>Bambino</li>
         </ul>
       </div>
-      <div class="col-4">
+      <div class="col-4 center-items ">
         <img class="logo1" src="/img/boolean-logo.png" />
       </div>
-      <div class="col-4">
+      <div class="col-4 center-items">
         <img class="person" src="/img/person-line-drawing-svgrepo-com.svg" />
         <img class="heart" src="/img/heart-svgrepo-com.svg" />
-        <img clas="bag" src="/img/bag-svgrepo-com.svg" />
+        <img src="/img/bag-svgrepo-com.svg" />
       </div>
     </div>
   </header>
@@ -32,9 +32,11 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
-ul,
-li {
+.center-items {
   display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: center;
   gap: 10px;
 }
 
