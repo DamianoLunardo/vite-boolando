@@ -12,12 +12,12 @@ export default {
   <footer class="footer">
     <div class="container">
       <div class="rowf">
-        <div>
+        <div class="col-8">
           Boolando s.r.l <br />
           Informazioni &nbsp&nbsp Legali Informativa sulla privacy &nbsp&nbsp
           Diritto di recesso
         </div>
-        <div>
+        <div class="col-4">
           Trovaci anche su
           <br />
           <a href="https://twitter.com/home" target="_blank">
