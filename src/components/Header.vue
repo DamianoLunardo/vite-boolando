@@ -3,10 +3,11 @@ export default {
   data() {
     return {
       title: "Header",
-      headerItems: [
-        { text: "Donna"},
-        { text: "Uomo"},
-        { text: "Bambino"},
+      headerItems: [{ text: "Donna" }, { text: "Uomo" }, { text: "Bambino" }],
+      headerIcons: [
+        { icon: "/img/person-line-drawing-svgrepo-com.svg" },
+        { icon: "/img/heart-svgrepo-com.svg" },
+        { icon: "/img/bag-svgrepo-com.svg" },
       ],
     };
   },
@@ -27,9 +28,11 @@ export default {
         <img class="logo1" src="/img/boolean-logo.png" />
       </div>
       <div class="col-4 center-items">
-        <img class="person" src="/img/person-line-drawing-svgrepo-com.svg" />
-        <img class="heart" src="/img/heart-svgrepo-com.svg" />
-        <img src="/img/bag-svgrepo-com.svg" />
+        <ul>
+          <li v-for="item in headerIcons" :key="item.icon">
+            <img class="size" :src="item.icon" alt="Icona" />
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -52,19 +55,12 @@ header {
   font-size: 20px;
   color: white;
 }
-
 .logo1 {
   align-items: center;
   height: 50px;
   width: 210px;
 }
-
-.heart {
-  width: 30px;
-  height: 30px;
-}
-
-.person {
+.size {
   width: 30px;
   height: 30px;
 }
