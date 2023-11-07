@@ -19,7 +19,7 @@ export default {
     <figure class="card__image">
       <img class="image1" :src="'/img/' + item.frontImage" />
       <img class="image2" :src="'/img/' + item.backImage" />
-      <span class="heart-icon rectangle square">&hearts;</span>
+      <span class="heart-icon rectangle square" v-if ="item.isInFavorites">&hearts;</span>
       <div class="text">
         <span class="discount rectangle-red">- 30%</span>
         <span class="sustainability rectangle-green">Sostenibilità</span>
