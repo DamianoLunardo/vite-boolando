@@ -5,6 +5,7 @@ import pageFooter from './components/Footer.vue'
 
 
 
+
 export default {
   components: {
     pageHeader,
@@ -13,7 +14,8 @@ export default {
   },
   data () {
     return {
-      message: 'Ciao'
+      message: 'Ciao',
+    
     }
   }
 }
