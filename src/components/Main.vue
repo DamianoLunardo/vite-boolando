@@ -1,29 +1,31 @@
 <script>
-import vestiti from './Vestiti.vue'
-import infoDatabase from '../db.json';
+import vestiti from "./Vestiti.vue";
+import infoDatabase from "../db.json";
 
 export default {
   components: {
-	vestiti
+    vestiti,
   },
-  data () {
-	return {
-	infoDb : infoDatabase	
-	}
-},
-created() {
-    console.log(this.infoDb)
-  }
-}
+  data() {
+    return {
+      products: infoDatabase.products,
+    };
+  },
+  created() {
+    console.log(this.products);
+  },
+};
 </script>
 
 <template>
-    
-<vestiti />
-   
-
+  <div class="container">
+    <div class="row">
+      <vestiti class="col-4" v-for="product in products" :item="product" />
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+
 
 </style>

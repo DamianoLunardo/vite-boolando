@@ -1,5 +1,5 @@
 <script>
-import pageHeader from './components/Header.vue'
+import AppHeader from './components/AppHeader.vue'
 import pageMain from './components/Main.vue'
 import pageFooter from './components/Footer.vue'
 
@@ -8,7 +8,7 @@ import pageFooter from './components/Footer.vue'
 
 export default {
   components: {
-    pageHeader,
+    AppHeader,
     pageMain,
     pageFooter,
   },
@@ -24,7 +24,7 @@ export default {
 
 
 <template>
-<pageHeader />
+<AppHeader />
 <pageMain />
 <pageFooter />
 </template>
@@ -32,5 +32,5 @@ export default {
 
 
 <style lang="scss">
-@use './styles/general.scss'
+@use './styles/general.scss';
 </style>
