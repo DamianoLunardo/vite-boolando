@@ -1,6 +1,7 @@
 <script>
 import vestiti from "./Vestiti.vue";
-import infoDatabase from "../db.json";
+//import infoDatabase from "../db.json";
+import { store } from "../store";
 
 export default {
   components: {
@@ -8,11 +9,12 @@ export default {
   },
   data() {
     return {
-      products: infoDatabase.products,
+      //products: infoDatabase.products,
+      store
     };
   },
   created() {
-    console.log(this.products);
+    console.log(this.store.products);
   },
 };
 </script>
@@ -20,7 +22,7 @@ export default {
 <template>
   <div class="container">
     <div class="row">
-      <vestiti class="col-4" v-for="product in products" :item="product" />
+      <vestiti class="col-4" v-for="product in store.products" :item="product" />
     </div>
   </div>
 </template>
