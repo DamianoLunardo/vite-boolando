@@ -14,7 +14,6 @@ export default {
           return badge.value;
         }
       }
-      return "";
     },
     hasSustainabilityBadge(badges) {
       for (const badge of badges) {
@@ -77,7 +76,7 @@ figure > img {
 .heart {
   width: 30px;
   height: 30px;
- }
+}
 .person {
   width: 30px;
   height: 30px;
