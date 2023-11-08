@@ -3,5 +3,6 @@ import infoDatabase from "./db.json";
 
 export const store = reactive ({
     message: 'Ciao mondo',
-    products: infoDatabase.products
+    //products: infoDatabase.products
+    products: []
 })
