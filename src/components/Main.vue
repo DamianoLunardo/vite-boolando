@@ -2,6 +2,7 @@
 import vestiti from "./Vestiti.vue";
 //import infoDatabase from "../db.json";
 import { store } from "../store";
+import axios from "axios";
 
 export default {
   components: {
@@ -14,7 +15,13 @@ export default {
     };
   },
   created() {
-    console.log(this.store.products);
+    //console.log(this.store.products);
+    axios.get('http://localhost:3000/products')
+    .then(res => {
+      const products = res.data
+      console.log(res, products)
+      this.store.products = products
+    })
   },
 };
 </script>
