@@ -13,10 +13,13 @@ export default {
     <div class="container">
       <div class="rowf">
         <div class="col-8">
-          Boolando s.r.l <br />
-          Informazioni &nbsp&nbsp Legali Informativa sulla privacy &nbsp&nbsp
-          Diritto di recesso
-          <br />
+          <div>
+           Boolando s.r.l 
+          </div>
+           <p>Informazioni &nbsp&nbsp Legali Informativa sulla privacy &nbsp&nbsp
+          Diritto di recesso </p>
+          
+          
         </div>
         <div class="col-4 prova">
           <div>Trovaci anche su</div>
