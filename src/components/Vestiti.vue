@@ -1,5 +1,29 @@
 <script>
 export default {
+  methods: {
+    hasDiscount(badges) {
+      for (const badge of badges) {
+        if (badge.type === "discount" && badge.value) {
+          return true;
+        }
+      }
+    },
+    getDiscount(badges) {
+      for (const badge of badges) {
+        if (badge.type === "discount" && badge.value) {
+          return badge.value;
+        }
+      }
+      return "";
+    },
+    hasSustainabilityBadge(badges) {
+      for (const badge of badges) {
+        if (badge.type === "tag" && badge.value === "Sostenibilità") {
+          return true;
+        }
+      }
+    },
+  },
   data() {
     return {
       title: "Main",
@@ -19,14 +43,22 @@ export default {
     <figure class="card__image">
       <img class="image1" :src="'/img/' + item.frontImage" />
       <img class="image2" :src="'/img/' + item.backImage" />
-      <span class="heart-icon rectangle square" v-if ="item.isInFavorites">&hearts;</span>
+      <span class="heart-icon rectangle square" v-if="item.isInFavorites"
+        >&hearts;</span
+      >
       <div class="text">
-        <span class="discount rectangle-red">- 30%</span>
-        <span class="sustainability rectangle-green">Sostenibilità</span>
+        <span class="discount rectangle-red" v-if="hasDiscount(item.badges)">{{
+          getDiscount(item.badges)
+        }}</span>
+        <span
+          class="sustainability rectangle-green"
+          v-if="hasSustainabilityBadge(item.badges)"
+          >Sostenibilità</span
+        >
       </div>
     </figure>
     {{ item.brand }}
-    <h6>{{ item.name }}</h6>
+    <h4>{{ item.name }}</h4>
     <p>{{ item.price }} &euro;</p>
     <!-- <span class="red-cost">14,99 &euro;</span> -->
   </div>
@@ -42,17 +74,14 @@ figure > img {
   display: block;
   width: 100%;
 }
-
 .heart {
   width: 30px;
   height: 30px;
-}
-
+ }
 .person {
   width: 30px;
   height: 30px;
 }
-
 .red-cost {
   color: red;
 }
@@ -66,7 +95,7 @@ figure > img {
   display: block;
   text-align: center;
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: red;
 }
 .square {
   background-color: white;
@@ -77,7 +106,6 @@ figure > img {
   position: absolute;
   bottom: 10%;
 }
-
 .discount {
   z-index: 2;
   display: inline-block;
@@ -87,13 +115,11 @@ figure > img {
   font-size: 15px;
   color: rgb(255, 255, 255);
 }
-
 .rectangle-red {
   width: 50px;
   height: 20px;
   background-color: red;
 }
-
 .sustainability {
   z-index: 1;
   top: 85%;
@@ -103,7 +129,6 @@ figure > img {
   font-size: 15px;
   color: rgb(255, 255, 255);
 }
-
 .rectangle-green {
   width: 100px;
   height: 20px;
