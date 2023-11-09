@@ -57,7 +57,7 @@ export default {
       </div>
     </figure>
     {{ item.brand }}
-    <h4>{{ item.name }}</h4>
+    <h4 @click="$emit('show', item)">{{ item.name }}</h4>
     <p>{{ item.price }} &euro;</p>
     <!-- <span class="red-cost">14,99 &euro;</span> -->
   </div>
