@@ -53,14 +53,22 @@ export default {
   <div v-if="isModalVisible" class="modal">
     <div class="modal-content">
       <div class="card__header">
-        <h2>{{ selectedProduct.name }}</h2>
-        <button @click="closeModal">Chiudi</button>
+        <img class="image" :src="'/img/' + selectedProduct.frontImage" />
+        <div class="info-container">
+          <h4>{{ selectedProduct.brand }}</h4>
+          <h5>{{ selectedProduct.name }}</h5>
+          <p>{{ selectedProduct.price }}</p>
+          <button class="btn" @click="closeModal">Chiudi</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.image {
+  width: 70%;
+}
 .modal .modal-content {
   position: fixed;
   top: 50%;
@@ -73,6 +81,7 @@ export default {
   width: 100%;
   max-width: 500px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  align-items: center;
 }
 
 .card__header {
@@ -81,5 +90,26 @@ export default {
   justify-content: space-between;
   font-size: 22px;
   font-weight: 700;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(171, 72, 72);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
 }
 </style>
