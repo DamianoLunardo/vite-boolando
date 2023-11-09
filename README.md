@@ -16,3 +16,9 @@ Temporaneamente importate il json nello store. e controllate che lápp funzioni 
 - Installiamo la libreria json-server e aggiungiamo al package.json lo script “server” necessario per avviarlo: “json-server --watch db.json” e di conseguenza avviamolo.
 Rimuoviamo l’import del json dallo store che inizialmente dovra contenere un arrai vuoti di prodotti e poi facciamo in modo che la nostra App, all’avvio, faccia una chiamata GET al server json all’indirizzo http://localhost:3000/products e recuperando i dati dalla risposta li vada a salvare nello store globale.
 
+## Giorno 4
+- Facciamo in modo che al click sul nome del prodotto nella card venga emesso un evento “show” verso il componente padre. Nel componente padre, ascoltiamo l’evento e apriamo una modale che mostra tutte le informazioni testuali del prodotto. Nella modale è presente una X (o un pulsante) per chiuderla.
+
+#### Bonus
+- Proviamo a creare una modale più completa: mostriamo le immagini del prodotto sulla sinistra e le informazioni di testo sulla destra.
+
