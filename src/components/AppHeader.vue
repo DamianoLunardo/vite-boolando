@@ -43,13 +43,11 @@ export default {
 .center-items {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
   justify-content: center;
   gap: 10px;
 }
 
 header {
-  padding-top: 20px;
   background-color: $header-color;
   font-weight: bold;
   font-size: 20px;
