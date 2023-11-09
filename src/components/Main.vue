@@ -57,7 +57,7 @@ export default {
         <div class="info-container">
           <h4>{{ selectedProduct.brand }}</h4>
           <h5>{{ selectedProduct.name }}</h5>
-          <p>{{ selectedProduct.price }}</p>
+          <p>{{ selectedProduct.price }} &euro;</p>
           <button class="btn" @click="closeModal">Chiudi</button>
         </div>
       </div>
